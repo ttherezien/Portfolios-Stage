@@ -1,15 +1,16 @@
 <template>
     <div class="home-view">
         <h1>Bienvenue sur mon Portfolios</h1>
-        <div style="display: flex;justify-content: space-evenly;">
+        <div class="container_card">
             <router-link to="/stuckwin" class="card">
-                <div class="card-image"><img style="width: 120%; height: auto;" src="@/assets/Stuckwin.png" alt=""></div>
+                <div class="card-image"><img style="width: 120%; height: auto;" src="@/assets/Stuckwin.png" alt="">
+                </div>
                 <div class="card-description">
                     <p class="text-title">Stuckwin</p>
                     <p class="text-body">Jeu de plateaux fait en java et en python</p>
                 </div>
             </router-link>
-            
+
 
             <div class="card">
                 <div class="card-image"></div>
@@ -55,7 +56,7 @@ export default {
     position: absolute;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     background: var(--vert-clair);
-    background: linear-gradient(to top, var(--jaune),var(--marron));
+    background: linear-gradient(to top, var(--jaune), var(--marron));
 }
 
 /*Description */
@@ -88,5 +89,28 @@ export default {
 /* Hover states */
 .card:hover .card-description {
     transform: translateY(100%);
+}
+
+.home-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.container_card {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container_card {
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 </style>
