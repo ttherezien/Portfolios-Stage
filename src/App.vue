@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <img class="logo" src="@/assets/logoTit.jpeg" alt="Image" />
+      <router-link to="/">Home</router-link>
     </nav>
     <router-view/>
   </div>
@@ -18,15 +18,27 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #6195c9;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #0097D6;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #AFCA51;
 }
+
+.logo{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
 </style>
