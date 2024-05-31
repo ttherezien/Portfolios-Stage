@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <nav >
-      
+    <nav>
       <img class="logo" src="@/assets/logoTit.jpeg" alt="Image" />
-    <div class="navButton">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">À propos de moi </router-link>
-      <router-link to="/projects">Mes projets</router-link>
-      <router-link to="/stage">Mon stage</router-link>
-      <router-link to="/contact">Contact</router-link>
-    </div>
+      <div class="navButton">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">À propos de moi </router-link>
+        <router-link to="/projects">Mes projets</router-link>
+        <router-link to="/stage">Mon stage</router-link>
+        <router-link to="/contact">Contact</router-link>
+      </div>
     </nav>
-    <router-view style="margin-left: 100px;margin-right: 100px;"/>
+    <router-view style="margin-left: 100px;margin-right: 100px;" />
   </div>
 </template>
 
 <style>
-
-:root{
-  --vert-fonce : #18534F;
-  --vert-clair : #226D68;
-  --blanc : #ECF8F6;
-  --jaune : #FEEAA1;
-  --marron : #D6955B;
+:root {
+  --vert-fonce: #18534F;
+  --vert-clair: #226D68;
+  --blanc: #ECF8F6;
+  --jaune: #FEEAA1;
+  --marron: #D6955B;
 }
 
 #app {
@@ -34,28 +32,24 @@
 }
 
 nav {
-  margin-right: 200px;
-  margin-left: 200px;
+  margin: 0 200px;
   display: flex;
-  
-  
+  flex-wrap: wrap;
   background-color: var(--vert-fonce);
-
-  border-radius: 90px 30px  30px 90px;
-
+  border-radius: 90px 30px 30px 90px;
+  padding: 10px;
 }
 
-.navButton{
+.navButton {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
-
-
-.logo{
+.logo {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -65,13 +59,13 @@ nav {
 nav a {
   padding: 12.5px 30px;
   text-decoration: none;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
   border: 0;
-  border-radius: 0px;
+  padding: none;
+  border-radius: 0;
   background-color: var(--vert-fonce);
   color: var(--blanc);
-  font-weight: Bold;
+  font-weight: bold;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
@@ -83,18 +77,64 @@ nav a:hover {
 }
 
 nav a:active {
-  background-color:var(--vert-clair);
+  background-color: var(--vert-clair);
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
-  
   border-radius: 5px;
   transform: scale(0.98);
   color: var(--blanc);
-
   box-shadow: inset 41px 41px 40px #1d5d58,
-            inset -41px -41px 40px #277d78;
-
+    inset -41px -41px 40px #277d78;
 }
 
+@media (max-width: 1200px) {
+  nav {
+    margin: 0 100px;
+  }
 
+  nav a {
+    padding: 10px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 0 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navButton {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 5px 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    margin: 0 20px;
+    padding: 5px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  nav a {
+    padding: 8px 0px;
+    margin: 3px 0;
+  }
+}
 </style>
