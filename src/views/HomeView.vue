@@ -1,11 +1,32 @@
 <template>
     <div class="home-view">
         <h1>Bienvenue sur mon Portfolios</h1>
-        <p>Je vais vous présenter </p>
-        <img src="https://img.shields.io/endpoint?url=https://wakapi.dev/api/compat/shields/v1/Niutao/project:StuckwinPython&interval:30_days&label=Stuckwin" alt="Vue logo">
-        <img src="https://wakapi.dev/api/compat/shields/v1/Niutao/project:StuckwinPython&interval:30_days&label=last 30d" alt="Vue logo">
+        <div style="display: flex;justify-content: space-evenly;">
+            <router-link to="/stuckwin" class="card">
+                <div class="card-image"><img style="width: 120%; height: auto;" src="@/assets/Stuckwin.png" alt=""></div>
+                <div class="card-description">
+                    <p class="text-title">Stuckwin</p>
+                    <p class="text-body">Jeu de plateaux fait en java et en python</p>
+                </div>
+            </router-link>
+            
 
-        
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-description">
+                    <p class="text-title"> Card Title</p>
+                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
     </div>
 </template>
 
@@ -16,5 +37,56 @@ export default {
 </script>
 
 <style scoped>
-/* Add your component styles here */
+.card {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+    margin: 10px;
+}
+
+/*Image*/
+.card-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: var(--vert-clair);
+    background: linear-gradient(to top, var(--jaune),var(--marron));
+}
+
+/*Description */
+.card-description {
+    display: flex;
+    position: absolute;
+    gap: .5em;
+    flex-direction: column;
+    background-color: var(--blanc);
+    color: #212121;
+    height: 70%;
+    bottom: 0;
+    border-radius: 16px;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+}
+
+/*Text*/
+.text-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.text-body {
+    font-size: 1rem;
+    line-height: 130%;
+}
+
+
+/* Hover states */
+.card:hover .card-description {
+    transform: translateY(100%);
+}
 </style>
