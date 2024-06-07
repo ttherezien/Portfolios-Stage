@@ -29,6 +29,7 @@ export default {
     flex-direction: row;
     gap: 2em;
     align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 768px){

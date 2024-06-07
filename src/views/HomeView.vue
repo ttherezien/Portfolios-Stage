@@ -3,7 +3,7 @@
         <h1>Bienvenue sur mon Portfolios</h1>
         <div class="container_card">
             <router-link to="/stuckwin" class="card">
-                <div class="card-image"><img style="width: 120%; height: auto;" src="@/assets/Stuckwin.png" alt="">
+                <div class="card-image"><img style="width: -webkit-fill-available; height: auto; margin:5%" src="@/assets/Stuckwin.png" alt="">
                 </div>
                 <div class="card-description">
                     <p class="text-title">Stuckwin</p>

@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <div class="logo-button">
-        <img class="logo" src="@/assets/logoTit.jpeg" alt="Image" />
+        <img class="logo" src="@/assets/logoTit.jpeg" alt="Image" @click="homelink" />
         <button class="menu-button" @click="toggleMenu">☰</button>
       </div>
       <div :class="['navButton', { 'navButton--open': menuOpen }]">
@@ -19,6 +19,7 @@
 
 
 <script>
+
 export default {
   data() {
     return {
@@ -28,6 +29,9 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
+    },
+    homelink() {
+      return this.$router.push('/');
     },
   },
 };
@@ -53,7 +57,7 @@ export default {
 }
 
 nav {
-  margin: 0 200px;
+  margin: 0 100px;
   display: flex;
   flex-wrap: wrap;
   background-color: var(--vert-fonce);
@@ -96,8 +100,7 @@ nav a {
   text-decoration: none;
   margin: 5px;
   border: 0;
-  border-radius: 0;
-  background-color: var(--vert-fonce);
+  border-radius:5px;
   color: var(--blanc);
   font-weight: bold;
   overflow: hidden;
@@ -107,7 +110,8 @@ nav a {
 
 nav a:hover {
   background-color: var(--vert-clair);
-  box-shadow: 0 0 10px #faf1cf50;
+  box-shadow: 0 0 5px #faf1cf50;
+  border-radius: 5px;
   transform: scale(1.01);
 }
 
@@ -120,12 +124,30 @@ nav a:active {
   box-shadow: inset 41px 41px 40px #1d5d58, inset -41px -41px 40px #277d78;
 }
 
+@media (max-width: 1000px){
+  nav {
+    margin: 0 25px;
+  }
+  
+  .navButton a {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+    
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+}
+
 @media (max-width: 768px) {
 
   .logo-button {
     display: flex;
     align-items: center;
-    justify-content: space-betwe;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -141,11 +163,17 @@ nav a:active {
     overflow: hidden;
     flex-direction: column;
     width: 100%;
+    opacity: 0;
   }
 
   .navButton--open {
     max-height: 500px;
-    /* Adjust this value as needed */
+    transition: all 0.5s ease-in-out;
+    
+
+    opacity: 1;
+
+    
   }
 
   nav a {
