@@ -20,6 +20,11 @@ const routes = [
     path: '/stage',
     name: 'stage',
     component: () => import('../views/StageView.vue')
+  },
+  {
+    path: '/modal',
+    name: 'modal',
+    component: () => import('../views/Modal.vue')
   }
 ]
 

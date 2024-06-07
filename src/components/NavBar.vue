@@ -9,7 +9,7 @@
             <router-link to="/about">À propos de moi </router-link>
             <router-link to="/projects">Mes projets</router-link>
             <router-link to="/stage">Mon stage</router-link>
-            <router-link to="/contact">Contact</router-link>
+            <router-link to="/modal">Contact</router-link>
         </div>
     </nav>
 </template>
