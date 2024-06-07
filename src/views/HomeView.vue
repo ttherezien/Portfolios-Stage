@@ -12,14 +12,14 @@
             </router-link>
 
 
-            <div class="card">
+            <router-link to="/stage" class="card">
                 <div class="card-image"></div>
                 <div class="card-description">
-                    <p class="text-title"> Card Title</p>
-                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                    </p>
+                    <p class="text-title"> Augmentation des données</p>
+                    <p class="text-body">Premiere partie de mon stage de recherche sur l'augmentation des données</p>
+                    
                 </div>
-            </div>
+            </router-link>
 
         </div>
 

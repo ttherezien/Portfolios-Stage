@@ -15,8 +15,12 @@ const routes = [
     path: '/stuckwin',
     name: 'stuckwin',
     component: Stuckwin
+  },
+  {
+    path: '/stage',
+    name: 'stage',
+    component: () => import('../views/StageView.vue')
   }
-  
 ]
 
 const router = new VueRouter({
