@@ -5,6 +5,8 @@ import router from './router'
 import store from './store'
 import "./style.css";
 Vue.config.productionTip = false
+import 'flowbite/dist/flowbite.min.css';
+import 'flowbite';
 
 new Vue({
   router,
