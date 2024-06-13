@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav">
+    <nav class="nav mx-5 md:mx-32">
         <div class="logo-button">
             <img class="logo" src="@/assets/logoTit.jpeg" alt="Image" @click="homelink" />
             <button class="menu-button" @click="toggleMenu">☰</button>
@@ -37,7 +37,7 @@ export default {
 
 
 .nav {
-  margin: 0 100px;
+  
   display: flex;
   flex-wrap: wrap;
   background-color: var(--vert-fonce);
@@ -132,7 +132,6 @@ export default {
   }
 
   .nav{
-    margin: 0 50px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -149,14 +148,11 @@ export default {
   .navButton--open {
     max-height: 500px;
     transition: all 0.5s ease-in-out;
-    
-
     opacity: 1;
-
-    
   }
+  
 
-  .nava {
+  .nav a {
     margin: 5px 0;
     width: 90%;
     text-align: center;

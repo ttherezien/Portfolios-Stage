@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
         <div class="py-8 border-b mb-8 ">
             <h1 class="text-2xl font-bold">L'augmentation des données d'images</h1>
@@ -98,11 +98,34 @@
 
             </div>
             <div class="  py-8 border rounded-lg shadow-md p-6 bg-white">
-                <img src="@/assets/DATDAP.png" class="w-auto" alt="">
+                <h2 class="text-xl font-semibold mb-4">La Difference entre le DAP et le DAT</h2>
 
+                <p class="pt-2">Le <b>Data Augmentation during Preprocessing (DAP)</b> et le <b>Data Augmentation during Training
+                        (DAT)</b> sont
+                    deux techniques utilisées pour améliorer les performances des modèles de machine learning en
+                    augmentant la diversité des données d'entraînement.
+                </p>
+                <p class="pt-2">
+                    Le <b>DAP</b> consiste à appliquer des transformations aux images avant le début de l'entraînement. Les
+                    images augmentées sont stockées et prêtes à être utilisées pour entraîner le modèle. Cette méthode
+                    permet de vérifier et valider les images augmentées avant l'entraînement, mais peut nécessiter un
+                    espace de stockage supplémentaire.
+                </p>
+                <img src="@/assets/DAP.png" class="w-auto" alt="">
+                <p class="pt-2">
+                    Le <b>DAT</b>, en revanche, applique les transformations en temps réel pendant le processus d'entraînement.
+                    Les images sont augmentées dynamiquement à chaque époque, introduisant une variabilité continue qui
+                    peut améliorer la généralisation du modèle. Cette approche est plus exigeante en termes de mémoire
+                    et de puissance de calcul, mais elle n'augmente pas les besoins en stockage et permet une
+                    augmentation continue et variée des données.
+                </p>
+
+
+                <img src="@/assets/DAT.png" class="w-auto" alt="">
+                
             </div>
 
-            
+
 
 
         </div>
