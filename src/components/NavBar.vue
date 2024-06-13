@@ -6,10 +6,10 @@
         </div>
         <div :class="['navButton', { 'navButton--open': menuOpen }]">
             <router-link to="/">Home</router-link>
-            <router-link to="/about">À propos de moi </router-link>
-            <router-link to="/projects">Mes projets</router-link>
+            <!--router-link to="/about">À propos de moi </router-link-->
+            <!-- <router-link to="/projects">Mes projets</router-link> -->
             <router-link to="/stage">Mon stage</router-link>
-            <router-link to="/modal">Contact</router-link>
+            <!-- <router-link to="/modal">Contact</router-link> -->
         </div>
     </nav>
 </template>

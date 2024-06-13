@@ -1,23 +1,38 @@
 <template>
     <div class="home-view">
-        <h1>Bienvenue sur mon Portfolios</h1>
+        <h1 class="  text-3xl font-semibold mb-4">Bienvenue, je m'appelle Thérézien Titouan</h1>
+        <div class="text-center  border rounded-lg shadow-md p-6 bg-white">
+
+            <p class="mt-4">Je suis étudiant en informatique à l'iut de Belfort-Montbéliard. J'ai créé ce site pour vous
+                présenter mon
+                stage de recherche à Femto-ST à Belfort.</p>
+
+            <p class="mt-4">Je compte l'améliorer au fur et à mesure de mes projets. Vous pouvez accéder au code source
+                de ce site ainsi
+                que des mes projets public sur mon <a class="underline hover:no-underline font-semibold"
+                    href="https://github.com/ttherezien">github
+                </a>
+            </p>
+
+        </div>
+
         <div class="container_card">
-            <router-link to="/stuckwin" class="card">
+            <!-- <router-link to="/stuckwin" class="card">
                 <div class="card-image"><img style="width: -webkit-fill-available; height: auto; margin:5%" src="@/assets/Stuckwin.png" alt="">
                 </div>
                 <div class="card-description">
                     <p class="text-title">Stuckwin</p>
                     <p class="text-body">Jeu de plateaux fait en java et en python</p>
                 </div>
-            </router-link>
+            </router-link> -->
 
 
             <router-link to="/stage" class="card">
                 <div class="card-image"></div>
                 <div class="card-description">
                     <p class="text-title"> Augmentation des données</p>
-                    <p class="text-body">Premiere partie de mon stage de recherche sur l'augmentation des données</p>
-                    
+                    <p class="text-body">Mon Stage en recherche à Femto-ST à Belfort </p>
+
                 </div>
             </router-link>
 
