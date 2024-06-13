@@ -51,6 +51,17 @@
                 <img src="@/assets/NormaltoNoise.png" alt="">
             </div>
 
+
+
+        </div>
+
+        <div class="py-8 border-b mb-8 ">
+            <h1 class="text-2xl font-bold">Methode Classique</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4 ">
+
+
+
             <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-bold mb-4">Bibliothèques d'Augmentation d'Image</h2>
                 <p class="font-semibold">Voici quelques-unes des bibliothèques les plus populaires :</p>
@@ -100,20 +111,23 @@
             <div class="  py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-semibold mb-4">La Difference entre le DAP et le DAT</h2>
 
-                <p class="pt-2">Le <b>Data Augmentation during Preprocessing (DAP)</b> et le <b>Data Augmentation during Training
+                <p class="pt-2">Le <b>Data Augmentation during Preprocessing (DAP)</b> et le <b>Data Augmentation during
+                        Training
                         (DAT)</b> sont
                     deux techniques utilisées pour améliorer les performances des modèles de machine learning en
                     augmentant la diversité des données d'entraînement.
                 </p>
                 <p class="pt-2">
-                    Le <b>DAP</b> consiste à appliquer des transformations aux images avant le début de l'entraînement. Les
+                    Le <b>DAP</b> consiste à appliquer des transformations aux images avant le début de l'entraînement.
+                    Les
                     images augmentées sont stockées et prêtes à être utilisées pour entraîner le modèle. Cette méthode
                     permet de vérifier et valider les images augmentées avant l'entraînement, mais peut nécessiter un
                     espace de stockage supplémentaire.
                 </p>
                 <img src="@/assets/DAP.png" class="w-auto" alt="">
                 <p class="pt-2">
-                    Le <b>DAT</b>, en revanche, applique les transformations en temps réel pendant le processus d'entraînement.
+                    Le <b>DAT</b>, en revanche, applique les transformations en temps réel pendant le processus
+                    d'entraînement.
                     Les images sont augmentées dynamiquement à chaque époque, introduisant une variabilité continue qui
                     peut améliorer la généralisation du modèle. Cette approche est plus exigeante en termes de mémoire
                     et de puissance de calcul, mais elle n'augmente pas les besoins en stockage et permet une
@@ -122,8 +136,53 @@
 
 
                 <img src="@/assets/DAT.png" class="w-auto" alt="">
-                
+
             </div>
+
+
+
+
+        </div>
+
+        <div class="py-8 border-b mb-8 ">
+            <h1 class="text-2xl font-bold">Le CycleGAN</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4">
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+                <h2 class="text-xl font-semibold mb-4">Qu'est-ce que le CycleGAN :</h2>
+                <p>Le CycleGAN est un modèle de deep learning qui permet de réaliser des transformations d'images
+                    d'un domaine à un autre sans nécessiter de données appariées. Il est basé sur l'architecture des GAN
+                    (Generative Adversarial Networks) et utilise un ensemble de deux générateurs et deux discriminateurs
+                    pour apprendre à transformer des images d'un domaine à un autre.
+                </p>
+
+                <img src="@/assets/CycleGAN.jpg" class="w-auto" alt="">
+
+
+            </div>
+
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+                <h2 class="text-xl font-semibold mb-4">Pourquoi le CycleGAN</h2>
+                <p>Après la lecture du papier de recherche <a class="underline hover:no-underline"
+                        href="A survey of synthetic data augmentation methods in computer vision">"A survey of synthetic
+                        data augmentation methods in computer vision" </a>
+                    de <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+A"
+                        class="hover:underline">Alhassan Mumuni</a>,
+                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+F"
+                        class="hover:underline">Fuseini Mumuni</a>,
+                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Gerrar,+N+K"
+                        class="hover:underline">Nana Kobina Gerrar</a>
+                    qui présente une revue des méthodes d'augmentation de données synthétiques en vision par ordinateur,
+                    j'ai fait un choix par rapport à nos compétence et à la simplicité de mise en place
+
+                </p>
+
+
+
+
+
+            </div>
+
 
 
 

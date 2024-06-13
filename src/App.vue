@@ -1,6 +1,5 @@
-
-
 <template>
+
   <div id="app">
     <NavBar />
     <router-view class="mx-5 md:mx-32 mb-24" />
@@ -37,5 +36,4 @@ export default {
   text-align: left;
   color: #2c3e50;
 }
-
 </style>
