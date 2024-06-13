@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div >
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
         <div class="py-8 border-b mb-8 ">
             <h1 class="text-2xl font-bold">L'augmentation des données d'images</h1>
         </div>
-        <div class="grid grid-cols-2 gap-4 grid-flow">
+        <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4">
 
             <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-semibold mb-4">Qu'est-ce que l'augmentation des images :</h2>
