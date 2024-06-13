@@ -50,17 +50,12 @@
                 <img src="@/assets/Normaltoflip.png" alt="">
                 <img src="@/assets/NormaltoNoise.png" alt="">
             </div>
-
-
-
         </div>
 
         <div class="py-8 border-b mb-8 ">
             <h1 class="text-2xl font-bold">Methode Classique</h1>
         </div>
         <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4 ">
-
-
 
             <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-bold mb-4">Bibliothèques d'Augmentation d'Image</h2>
@@ -104,9 +99,6 @@
 
                 </ul>
 
-
-
-
             </div>
             <div class="  py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-semibold mb-4">La Difference entre le DAP et le DAT</h2>
@@ -138,10 +130,6 @@
                 <img src="@/assets/DAT.png" class="w-auto" alt="">
 
             </div>
-
-
-
-
         </div>
 
         <div class="py-8 border-b mb-8 ">
@@ -150,45 +138,174 @@
         <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4">
             <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-semibold mb-4">Qu'est-ce que le CycleGAN :</h2>
-                <p>Le CycleGAN est un modèle de deep learning qui permet de réaliser des transformations d'images
-                    d'un domaine à un autre sans nécessiter de données appariées. Il est basé sur l'architecture des GAN
-                    (Generative Adversarial Networks) et utilise un ensemble de deux générateurs et deux discriminateurs
+                <p>Le <b>CycleGAN</b> est un modèle de <b>deep learning</b> qui permet de réaliser des
+                    <b>transformations d'images</b>
+                    d'un domaine à un autre sans nécessiter de <b>données appariées</b>. Il est basé sur l'architecture
+                    des <b>GAN
+                        (Generative Adversarial Networks)</b> et utilise un ensemble de <b>deux générateurs</b> et
+                    <b>deux discriminateurs</b>
                     pour apprendre à transformer des images d'un domaine à un autre.
                 </p>
 
                 <img src="@/assets/CycleGAN.jpg" class="w-auto" alt="">
 
-
             </div>
 
             <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
                 <h2 class="text-xl font-semibold mb-4">Pourquoi le CycleGAN</h2>
-                <p>Après la lecture du papier de recherche <a class="underline hover:no-underline"
-                        href="A survey of synthetic data augmentation methods in computer vision">"A survey of synthetic
+                <p>Après la lecture du papier de recherche
+                    <a class="underline hover:no-underline font-semibold" href="https://arxiv.org/abs/2403.10075"
+                        target="_blank">"A survey of synthetic
                         data augmentation methods in computer vision" </a>
-                    de <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+A"
-                        class="hover:underline">Alhassan Mumuni</a>,
-                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+F"
-                        class="hover:underline">Fuseini Mumuni</a>,
-                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Gerrar,+N+K"
-                        class="hover:underline">Nana Kobina Gerrar</a>
+                    de <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+A" class="hover:underline"
+                        target="_blank">Alhassan Mumuni</a>,
+                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Mumuni,+F" class="hover:underline"
+                        target="_blank">Fuseini Mumuni</a>,
+                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Gerrar,+N+K" class="hover:underline "
+                        target="_blank">Nana Kobina Gerrar</a>
                     qui présente une revue des méthodes d'augmentation de données synthétiques en vision par ordinateur,
                     j'ai fait un choix par rapport à nos compétence et à la simplicité de mise en place
-
                 </p>
+                <p class="pt-2"> Parmi les solutions que nous avons écartées, plusieurs nécessitaient l'utilisation de
+                    moteurs
+                    graphiques tels qu'Unreal Engine ou Unity. Ces technologies demandent des compétences spécifiques
+                    que nous ne possédons pas actuellement au sein du laboratoire. </p>
 
-
-
-
+                <p class="pt-2"> De plus, le Cycle GAN est très simple à utiliser, et sa structure, étant relativement
+                    ancienne, bénéficie d'une abondance d'exemples et de tutoriels. Cela facilite grandement sa mise en
+                    place. </p>
 
             </div>
 
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+
+                <h2 class="text-xl font-semibold mb-4">Objectif : </h2>
+                <p class="py-2">
+                    Notre objectif est de pouvoir entrainer un Cycle GAN avec des images de panneaux solaires, de deux
+                    catégorie differentes :
 
 
+                </p>
+                <ul class="list-disc list-inside ml-4 ">
+                    <li>Les panneaux solaires en bon état</li>
+                    <li>Les panneaux solaires avec des fractures physiques </li>
+                </ul>
 
+                <p class="py-2">
+                    Le Cycle GAN devra être capable de transformer des images de panneaux solaires en bon état en images
+                    de panneaux solaires avec des fractures physiques, et vice versa. Cela nous permettra de générer un
+                    dataset synthétique pour entraîner nos modèles de détection de fractures sur des images de panneaux
+                    solaires.
+                </p>
+
+            </div>
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+
+                <h2 class="text-xl font-semibold mb-4">Resultat : </h2>
+                <p class="py-2">
+                    Nous avons réussi à entraîner un Cycle GAN sur un dataset de panneaux solaires en bon état et de
+                    panneaux solaires avec des fractures physiques. Voici un aperçu des résultats obtenus au bout de 60h
+                    d'entrainement :
+                </p>
+                <img src="@/assets/CycleGANResult1.png" class="w-auto" alt="">
+                <img src="@/assets/CycleGANResult2.png" class="w-auto" alt="">
+                <img src="@/assets/CycleGANResult3.png" class="w-auto" alt="">
+                <p class="py-2">
+                    Les images générées par le Cycle GAN sont convaincantes et montrent des résultats prometteurs.
+                    Cependant, elles ne sont pas encore suffisamment réalistes pour être utilisées dans un contexte de
+                    production. La suite du travail consisterais à améliorer la qualité des images générées par le
+                    Cycle GAN soit en utilisant un dataset plus large, soit en ajustant les hyperparamètres du modèle,
+                    soit en patientant pour que le modèle s'entraine plus longtemps.
+                </p>
+
+                <p>
+                    Le problème est que nous ne pouvons pas augmenter la taille du dataset en raison des contraintes
+                    spécifiques au projet. De plus, ajuster les hyperparamètres et les temps d'entraînement entraînera
+                    un coût de temps significatif.
+                </p>
+
+                <p>
+                    C'est donc une piste très prometteuse, mais qui n'a pas encore été pleinement explorée.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="py-8 border-b mb-8 ">
+            <h1 class="text-2xl font-bold">Les compétences aquises lors du stage :</h1>
 
         </div>
+
+        <div class="grid grid-cols-1 gap-1 grid-flow md:grid-cols-2 md:gap-4">
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+                <h2 class="text-xl font-semibold mb-4">Développement d’applications durant mon stage</h2>
+
+                <p class="py-2"> Pendant mon stage, j'ai réalisé plusieurs sites web et API simples :</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li><b>Une API</b> permettant d'augmenter des images avec des méthodes de base, dotée d'une
+                        interface utilisateur
+                        très simple.</li>
+                    <img class="py-2" src="@/assets/DataAugmentAPI.png" alt="">
+                    <li><b>Un site web</b> permettant de visualiser facilement les scores de similarité entre images
+                        (pour détecter par
+                        exemple les doublons), calculés préalablement et stockés dans un fichier JSON.</li>
+                    <li>Une tentative de mise en place d'<b>un modèle de classification</b> basé sur la similarité
+                        syntaxique.</li>
+                </ul>
+
+                <p class="py-2"> J'ai acquis de l'expérience avec des outils comme <b>Flask, TensorFlow, Keras</b> et
+                    <b>Albumentations</b> en Python.
+                    Sans cahier des charges précis, j'ai pu adopter une approche flexible pour le développement et la
+                    création
+                    d'outils. Ces derniers m'ont permis d'améliorer la visualisation des résultats de mes modèles. Leur
+                    simplicité,
+                    conception et ergonomie les rendent accessibles.
+                </p>
+
+                <p class="py-2"> Cependant, ces outils étant destinés à un usage personnel, ils manquent d'ergonomie et
+                    n'ont pas été
+                    testés rigoureusement. Leur développement, généralement réalisé en deux jours maximum, ne les
+                    préparait pas à
+                    une utilisation à long terme en cas de modifications de fichiers.</p>
+            </div>
+
+
+            <div class="py-8 border rounded-lg shadow-md p-6 bg-white">
+                <h2 class="text-xl font-semibold mb-4">Gestion des données d'information</h2>
+
+                <p class="py-2"> Mon rôle durant mon stage incluait la gestion des données d'information, principalement
+                    axée sur des données photographiques. Contrairement aux bases de données relationnelles
+                    traditionnelles, mon travail ne nécessitait pas leur mise en place initiale.</p>
+
+                <p class="py-2"> En revanche, j'ai consacré une partie significative de mon temps à la préparation des
+                    données pour l'entraînement des modèles. Cela comprenait le nettoyage, la transformation et
+                    l'organisation des données afin de les rendre utilisables par les algorithmes d'apprentissage
+                    automatique. De plus, j'ai été chargé du stockage efficace et de la visualisation claire des
+                    résultats produits par ces modèles.</p>
+
+                <p class="py-2"> Un autre aspect crucial de mon travail était le tri des images. Ce processus, souvent
+                    fastidieux, a été simplifié par l'utilisation de méthodes de calcul de la similarité entre images.
+                    Cela m'a permis d'automatiser une partie du processus de tri et d'identifier rapidement les images
+                    similaires ou potentiellement redondantes.</p>
+
+
+                <p class="py-2"> Pour cela, j'ai utilisé plusieurs formats de stockage comme JSON et CSV. J'ai manipulé
+                    ces formats en utilisant des bibliothèques populaires en Python telles que <b>json</b>,
+                    <b>pandas</b> pour CSV, et <b>numpy</b> pour le traitement numérique des données. Ces
+                    outils m'ont permis de naviguer efficacement à travers les données, de les préparer pour
+                    l'entraînement des modèles et de les utiliser dans diverses applications.</p>
+
+            </div>
+
+        </div>
+
+
+
     </div>
+
+
+
+
 </template>
 
 <script>
